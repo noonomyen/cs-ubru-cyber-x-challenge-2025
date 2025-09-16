@@ -4,7 +4,7 @@
 
 - Cryptography
 - Web Application
-- Networking
+- Network
 - Steganography
 - Forensics
 - Reverse Engineering
@@ -15,7 +15,7 @@
 
 | Challenge | Catagory | Difficulty | Point | Flag | Author |
 | :- | :- | :- | :- | :- | :- |
-| Sanity Check | Web Application | Easy | 100 | Dynamic | noonomyen |
+| Sanity Check | Network | Easy | 100 | Dynamic | noonomyen |
 
 ## Difficulty and Points
 
