@@ -18,7 +18,7 @@
 | Sanity Check | Network | Easy | 100 | Dynamic | noonomyen |
 | Mairu | Reverse Engineering | Normal | 200 | Static | FoxZFox |
 
-## Difficulty and PointBinary Exploitation
+## Difficulty and Point
 
 | Difficulty | Easy | Normal | Medium | Hard |
 | :- | :-: | :-: | :-: | :-: |
