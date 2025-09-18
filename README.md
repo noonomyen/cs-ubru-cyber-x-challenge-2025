@@ -16,8 +16,9 @@
 | Challenge | Catagory | Difficulty | Point | Flag | Author |
 | :- | :- | :- | :- | :- | :- |
 | Sanity Check | Network | Easy | 100 | Dynamic | noonomyen |
+| Mairu | Reverse Engineering | Normal | 200 | Static | FoxZFox |
 
-## Difficulty and Points
+## Difficulty and PointBinary Exploitation
 
 | Difficulty | Easy | Normal | Medium | Hard |
 | :- | :-: | :-: | :-: | :-: |
