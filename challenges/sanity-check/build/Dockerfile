@@ -10,15 +10,14 @@ RUN gcc -static -o sanity-check sanity-check.c
 FROM alpine:latest
 
 RUN apk add --no-cache socat \
-    && adduser -D -h /home/sanity sanity
+    && mkdir -p /app
 
-WORKDIR /home/sanity
+WORKDIR /app
 
 COPY --from=build /build/sanity-check .
 
 COPY init.sh /init.sh
 
-RUN chmod +x /init.sh \
-    && chown -R sanity:sanity /home/sanity
+RUN chmod +x /init.sh
 
 CMD ["/init.sh"]

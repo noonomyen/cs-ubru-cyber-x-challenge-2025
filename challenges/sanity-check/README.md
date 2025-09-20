@@ -10,4 +10,8 @@ Format: `CSUBRU{...}`
 
 ---
 
+Image: `ic-sanity-check`
+
+---
+
 แค่ netcat connect ไปที่ instance แล้วตอบ 2
