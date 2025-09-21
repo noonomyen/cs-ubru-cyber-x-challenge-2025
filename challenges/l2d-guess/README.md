@@ -37,7 +37,7 @@ Format: `CSUBRU{...}`
 
 ### Build
 
-- `docker compose up --build -d`
+- `docker build -t ic-l2d-guess build`
 
 ---
 

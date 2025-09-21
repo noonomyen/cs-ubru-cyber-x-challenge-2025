@@ -19,6 +19,7 @@
 | Mairu | Reverse Engineering | Normal | 200 | Static | FoxZFox |
 | QuickScale Studio | Web Application | Hard | 500 | Dynamic | c0ffeeOverdose |
 | L2D Guess | Web Application | Medium | 300 | Static | c0ffeeOverdose |
+| students-list | Web Application | Normal | 200 | Static | c0ffeeOverdose |
 
 ## Difficulty and Point
 
