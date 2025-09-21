@@ -22,7 +22,7 @@
 ## Difficulty and Point
 
 | Difficulty | Test | Easy | Normal | Medium | Hard |
-| :- | :-: | :-: | :-: | :-: | :-: | :-: |
+| :- | :-: | :-: | :-: | :-: | :-: |
 | Point | 10 | 100 | 200 | 300 | 500 |
 
 ### Triple Blood Bonus
