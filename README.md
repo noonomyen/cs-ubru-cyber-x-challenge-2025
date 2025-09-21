@@ -17,12 +17,19 @@
 | :- | :- | :- | :- | :- | :- |
 | Sanity Check | Network | Easy | 100 | Dynamic | noonomyen |
 | Mairu | Reverse Engineering | Normal | 200 | Static | FoxZFox |
+| QuickScale Studio | Web Application | Hard | 500 | Dynamic | c0ffeeOverdose |
 
 ## Difficulty and Point
 
-| Difficulty | Easy | Normal | Medium | Hard |
-| :- | :-: | :-: | :-: | :-: |
-| Point | 100 | 200 | 300 | 500 |
+| Difficulty | Test | Easy | Normal | Medium | Hard |
+| :- | :-: | :-: | :-: | :-: | :-: | :-: |
+| Point | 10 | 100 | 200 | 300 | 500 |
+
+### Triple Blood Bonus
+
+- First: 5%
+- Second: 3%
+- Third: 1%
 
 ## Flag format
 
