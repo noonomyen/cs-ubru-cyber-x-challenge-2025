@@ -1,0 +1,53 @@
+# L2D Guess
+
+| Category | Difficulty | Point |
+| :-: | :-: | :-: |
+| Web | Medium | 300 |
+
+ทีมอีเว้นท์ของสมศักดิ์ กำลังเตรียมงานแฟนมีตของ Blue Archive เขาเลยทำเว็บเกม **L2D Guess** ให้แฟน ๆ มาทายชื่อนักเรียนจากภาพ Live2D แบบสุ่ม 10 รอบ หากตอบถูกทุกข้อจะถูกยอมรับว่าเป็น "Blue Archive Big Fan" แต่ถ้าพลาดแม้แต่ข้อเดียวก็จบเกมทันที รีเฟรชปุ๊บเกมก็จะสุ่มชุดรูปใหม่พร้อมนับสถิติใหม่ทั้งหมด ทุกอย่างปกติหมด จนกระทั่งคุณนั้นลอง Scan ดู แล้วคุณละรู้ไหมว่าอะไรที่ผิดปกติ?
+
+Format: `CSUBRU{...}`
+
+---
+
+## Hints
+
+- เกมมันแค่ตัวหลอก
+
+---
+
+## Configuration
+
+| Name | Value |
+| :- | :- |
+| Title | L2D-Guess |
+| Type | Static Container |
+| Category | Web |
+| Max Attempts Allowed |  |
+| Blood Bonus |  |
+| Container Image | `ic-l2d-guess` |
+| Service Port | 80 |
+| CPU Limit (0.1 CPUs) |  |
+| Memory Limit (MB) |  |
+| Storage Limit (MB) |  |
+
+- เว็บเกมเขียนด้วย PHP และดึงรูปจาก Cloudflare R2 โฟลเดอร์ `images/`
+- รีเฟรช 1 ครั้งจะ list รูปจาก R2 เพียงรอบเดียวแล้วสุ่มมา 10 รูปสำหรับเกม
+- ผู้พัฒนาลืมซ่อนไฟล์ `.env` ทำให้ credential ของ R2 หลุดออกมาทั้งหมด
+
+### Flags
+
+- `CSUBRU{w3lc0m3_blu3_4rchiv3_bigf4n_im_w4i7ing_f0r_y0u_1337_muh4h4}`
+
+### Build
+
+- `docker compose up --build -d`
+
+---
+
+## Analysis
+
+1. ขอไฟล์ `.env` จากเซิร์ฟเวอร์ (`/.env`) เพื่อดึงคีย์ R2
+2. ใช้ credential ที่ได้ไปเรียก Cloudflare R2 API ตรง ๆ
+3. `ls` โฟลเดอร์ `secret/` แล้วดึงไฟล์ `secret/flag_choo3ieyoole6Yei.txt`
+4. อ่านคอนเทนต์ไฟล์เพื่อรับ flag
