@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gzctf-minio
+  namespace: gzctf-server
+  labels:
+    app: gzctf-minio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gzctf-minio
+  template:
+    metadata:
+      labels:
+        app: gzctf-minio
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: node0
+      containers:
+      - name: gzctf-minio
+        image: minio/minio:latest
+        args:
+          - server
+          - /data
+          - --console-address
+          - ":9001"
+        ports:
+          - containerPort: 9000
+          - containerPort: 9001
+        env:
+          - name: MINIO_ROOT_USER
+            value: "minio"
+          - name: MINIO_ROOT_PASSWORD
+            value: "psyEbYQGAUK5A3TKXlz8GhjQDgKNo4ab"
+        volumeMounts:
+          - name: minio-storage
+            mountPath: /data
+      volumes:
+        - name: minio-storage
+          persistentVolumeClaim:
+            claimName: minio-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gzctf-minio
+  namespace: gzctf-server
+spec:
+  selector:
+    app: gzctf-minio
+  ports:
+    - name: api
+      port: 9000
+      nodePort: 30090
+      targetPort: 9000
+    - name: console
+      port: 9001
+      targetPort: 9001
+  type: NodePort
