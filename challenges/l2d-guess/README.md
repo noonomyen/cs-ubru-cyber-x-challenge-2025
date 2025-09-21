@@ -31,10 +31,6 @@ Format: `CSUBRU{...}`
 | Memory Limit (MB) |  |
 | Storage Limit (MB) |  |
 
-- เว็บเกมเขียนด้วย PHP และดึงรูปจาก Cloudflare R2 โฟลเดอร์ `images/`
-- รีเฟรช 1 ครั้งจะ list รูปจาก R2 เพียงรอบเดียวแล้วสุ่มมา 10 รูปสำหรับเกม
-- ผู้พัฒนาลืมซ่อนไฟล์ `.env` ทำให้ credential ของ R2 หลุดออกมาทั้งหมด
-
 ### Flags
 
 - `CSUBRU{w3lc0m3_blu3_4rchiv3_bigf4n_im_w4i7ing_f0r_y0u_1337_muh4h4}`
