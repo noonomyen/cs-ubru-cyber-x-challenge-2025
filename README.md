@@ -15,7 +15,7 @@
 
 | Challenge | Catagory | Difficulty | Point | Flag | Author |
 | :- | :- | :- | :- | :- | :- |
-| Sanity Check | Network | Easy | 100 | Dynamic | noonomyen |
+| Sanity Check | Network | Test | 10 | Dynamic | noonomyen |
 | Mairu | Reverse Engineering | Normal | 200 | Static | FoxZFox |
 | QuickScale Studio | Web Application | Hard | 500 | Dynamic | c0ffeeOverdose |
 
