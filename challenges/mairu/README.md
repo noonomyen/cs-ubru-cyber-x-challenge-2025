@@ -12,6 +12,28 @@ Format: `CSUBRU{...}`
 
 ---
 
+## Configuration
+
+| Name | Value |
+| :- | :- |
+| Title | Mairu |
+| Type | Static Attachments |
+| Category | Reverse |
+| Max Attempts Allowed | unlimited |
+| Blood Bonus | Enable |
+
+### Attachments
+
+- `Mairu.7z`
+
+### Flags
+
+- `CSUBRU{r3v3rs3_f1l3_0r_m0d1fy_m3m0ry?}`
+
+---
+
+## Analysis
+
 จากที่กล่าว มี hint ในคำอธิบายคือ `โดยเฉพาะวิธีที่ผู้พัฒนาพยายามป้องกันมันก็ตาม` ก็คือการโกงเกมนั้นเอง
 
 การโกงมีหลายวิธีมาก แต่ท่าพื้นฐานคือการแก้ไข memory

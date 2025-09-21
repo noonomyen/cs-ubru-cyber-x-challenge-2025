@@ -25,13 +25,17 @@ Format: `CSUBRU{...}`
 | Category |  |
 | Max Attempts Allowed |  |
 | Blood Bonus |  |
-| Container Image | `ic-[]` |
+| Container Image | ic-[] |
 | Service Port |  |
 | CPU Limit (0.1 CPUs) |  |
 | Memory Limit (MB) |  |
 | Storage Limit (MB) |  |
 
 [Configuration]
+
+### Attachments
+
+- [Attachment]
 
 ### Flags
 

@@ -10,10 +10,6 @@ Format: `CSUBRU{...}`
 
 ---
 
-No hint
-
----
-
 ## Configuration
 
 | Name | Value |
@@ -34,5 +30,7 @@ No hint
 - `CSUBRU{[GUID]}`
 
 ---
+
+## Analysis
 
 แค่ netcat connect ไปที่ instance แล้วตอบ 2
