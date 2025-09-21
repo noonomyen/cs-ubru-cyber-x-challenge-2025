@@ -1,0 +1,17 @@
+apiVersion: crd.projectcalico.org/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-all-except-nodeport
+  namespace: gzctf-challenges
+spec:
+  selector: all()   # apply to all pods in this namespace
+  types:
+  - Ingress
+  - Egress
+  ingress: []       # deny all ingress
+  egress:
+  - action: Allow
+    protocol: TCP
+    destination:
+      ports:
+      - 30000:32767   # NodePort range

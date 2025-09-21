@@ -1,0 +1,87 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gzctf-config
+  namespace: gzctf-server
+data:
+  appsettings.json: |
+    {
+      "AllowedHosts": "*",
+      "ConnectionStrings": {
+        "Database": "Host=gzctf-db:5432;Database=gzctf;Username=postgres;Password=Mc8FZwMiiFvTIGS2kkJQPIBew2S8OxyZ",
+        "RedisCache": "gzctf-garnet:6379,abortConnect=false",
+        "Storage": "minio.s3://keyId=minio;key=psyEbYQGAUK5A3TKXlz8GhjQDgKNo4ab;bucket=gzctf;serviceUrl=http://gzctf-minio:9000"
+      },
+      "Logging": {
+        "LogLevel": {
+          "Default": "Information",
+          "Microsoft": "Warning",
+          "Microsoft.Hosting.Lifetime": "Information"
+        }
+      },
+      "Telemetry": {
+        "Prometheus": {
+          "Enable": false
+        },
+        "OpenTelemetry": {
+          "Enable": false
+        },
+        "AzureMonitor": {
+          "Enable": false
+        },
+        "Console": {
+          "Enable": false
+        }
+      },
+      "EmailConfig": {
+        "SenderAddress": "",
+        "SenderName": "",
+        "UserName": "",
+        "Password": "",
+        "Smtp": {
+          "Host": "localhost",
+          "Port": 587,
+          "BypassCertVerify": false
+        }
+      },
+      "XorKey": "8269365a1dac622eab3e8ecc05a43b0f934097fb077acdb101ab1f873f07697f",
+      "ContainerProvider": {
+        "Type": "Kubernetes",
+        "PortMappingType": "Default",
+        "EnableTrafficCapture": false,
+        "PublicEntry": "10.30.0.5",
+        "KubernetesConfig": {
+          "Namespace": "gzctf-challenges",
+          "ConfigPath": "kube-config.yaml",
+          "AllowCIDR": [],
+          "DNS": []
+        }
+      },
+      "RequestLogging": false,
+      "DisableRateLimit": false,
+      "Registries": {
+        "service-host:5000": {
+        "UserName": "",
+        "Password": ""
+        }
+      },
+      "CaptchaConfig": {
+        "Provider": "None",
+        "SiteKey": "",
+        "SecretKey": ""
+      },
+      "ForwardedOptions": {
+        "ForwardedHeaders": 7,
+        "ForwardLimit": 1,
+        "ForwardedForHeaderName": "X-Forwarded-For",
+        "TrustedNetworks": [ "10.0.0.0/8" ],
+        "TrustedProxies": [ "172.20.0.4" ]
+      },
+      "Kestrel": {
+        "Limits": {
+          "MaxRequestBodySize": 27262946
+        },
+        "AddServerHeader": true,
+        "AllowResponseHeaderCompression": true
+      }
+    }
