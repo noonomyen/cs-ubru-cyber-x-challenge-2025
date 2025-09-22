@@ -20,6 +20,7 @@
 | QuickScale Studio | Web Application | Hard | 500 | Dynamic | c0ffeeOverdose |
 | L2D Guess | Web Application | Medium | 300 | Static | c0ffeeOverdose |
 | students-list | Web Application | Normal | 200 | Static | c0ffeeOverdose |
+| Login SQL | Web Application | Easy | 100 | Dynamic | noonomyen |
 
 ## Difficulty and Point
 
