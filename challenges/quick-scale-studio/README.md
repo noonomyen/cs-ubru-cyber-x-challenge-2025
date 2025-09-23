@@ -12,7 +12,7 @@ Format: `CSUBRU{...}`
 
 ## Hints
 
-- CVE-2022-44268: ImageMagick profile injection
+no hint
 
 ---
 
