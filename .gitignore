@@ -1,3 +1,4 @@
 .vscode
 tmp
 gzctf-dev/data
+/deploy.*
