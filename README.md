@@ -15,15 +15,15 @@
 
 | Challenge | Catagory | Difficulty | Point | Flag | Build required | Author |
 | :- | :- | :- | :- | :- | :- | :- |
-| Sanity Check | Network | Test | 10 | Dynamic | Yes | noonomyen |
-| Mairu | Reverse | Normal | 200 | Static | No | FoxZFox |
-| QuickScale Studio | Web Application | Hard | 500 | Dynamic | Yes | c0ffeeOverdose |
-| L2D Guess | Web Application | Medium | 300 | Static | Yes | c0ffeeOverdose |
-| students-list | Web Application | Normal | 200 | Static | Yes | c0ffeeOverdose |
-| Login SQL | Web Application | Easy | 100 | Dynamic | Yes | noonomyen |
-| CVE-2023-38831 | Forensics | Hard | 500 | Static | Yes | c0ffeeOverdose |
-| Matemi | Reverse | Hard | 500 | Static | No | FoxZFox |
-| Invisible | Reverse | Easy | 100 | Static | Pre | noonomyen |
+| [Sanity Check](./challenges/sanity-check) | Network | Test | 10 | Dynamic | Yes | noonomyen |
+| [Mairu](./challenges/mairu) | Reverse | Normal | 200 | Static | No | FoxZFox |
+| [QuickScale Studio](./challenges/quick-scale-studio) | Web Application | Hard | 500 | Dynamic | Yes | c0ffeeOverdose |
+| [L2D Guess](./challenges/l2d-guess) | Web Application | Medium | 300 | Static | Yes | c0ffeeOverdose |
+| [students-list](./challenges/students-list) | Web Application | Normal | 200 | Static | Yes | c0ffeeOverdose |
+| [Login SQL](./challenges/login-sql) | Web Application | Easy | 100 | Dynamic | Yes | noonomyen |
+| [CVE-2023-38831](./challenges/cve-2023-38831) | Forensics | Hard | 500 | Static | Yes | c0ffeeOverdose |
+| [Matemi](./challenges/matemi) | Reverse | Hard | 500 | Static | No | FoxZFox |
+| [Invisible](./challenges/invisible) | Reverse | Easy | 100 | Static | Pre | noonomyen |
 
 ## Difficulty and Point
 
