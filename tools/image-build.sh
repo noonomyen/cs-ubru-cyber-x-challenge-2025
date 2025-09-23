@@ -25,6 +25,7 @@ build() {
 }
 
 build base alpine-build
+build base debian-build
 build base nc-chall
 
 build chall sanity-check
