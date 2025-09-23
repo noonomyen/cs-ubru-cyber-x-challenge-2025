@@ -1,13 +1,9 @@
 #!/bin/sh
-set -e
 
-if [ -z "$GZCTF_FLAG" ]; then
-    echo "GZCTF_FLAG is not set."
-    exit 1
-fi
+source /nc-chall.sh
 
-echo "$GZCTF_FLAG" > /app/flag
-unset GZCTF_FLAG
+store_flag /app/flag
 
-exec socat TCP-LISTEN:1337,reuseaddr,fork \
-     EXEC:"/usr/sbin/chroot /app /sanity-check"
+unset_flag
+
+run /app/chall

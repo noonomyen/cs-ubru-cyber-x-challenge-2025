@@ -1,20 +1,16 @@
-FROM alpine:latest AS build
+FROM icb-build:latest AS builder
 
-RUN apk add --no-cache build-base
-
-WORKDIR /build
 COPY sanity-check.c .
 
-RUN gcc -static -o sanity-check sanity-check.c
+RUN gcc -static -o chall sanity-check.c
 
-FROM alpine:latest
-
-RUN apk add --no-cache socat \
-    && mkdir -p /app
+FROM icb-nc-chall:latest
 
 WORKDIR /app
 
-COPY --from=build /build/sanity-check .
+COPY --from=builder /build/chall .
+
+RUN rm -rf /build
 
 COPY init.sh /init.sh
 
