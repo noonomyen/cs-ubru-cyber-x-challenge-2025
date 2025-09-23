@@ -23,6 +23,7 @@
 | Login SQL | Web Application | Easy | 100 | Dynamic | Yes | noonomyen |
 | CVE-2023-38831 | Forensics | Hard | 500 | Static | Yes | c0ffeeOverdose |
 | Matemi | Reverse | Hard | 500 | Static | No | FoxZFox |
+| Invisible | Reverse | Easy | 100 | Static | Pre | noonomyen |
 
 ## Difficulty and Point
 
