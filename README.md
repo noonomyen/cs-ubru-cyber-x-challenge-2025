@@ -13,16 +13,16 @@
 
 ## Challenges List
 
-| Challenge | Catagory | Difficulty | Point | Flag | Author |
-| :- | :- | :- | :- | :- | :- |
-| Sanity Check | Network | Test | 10 | Dynamic | noonomyen |
-| Mairu | Reverse | Normal | 200 | Static | FoxZFox |
-| QuickScale Studio | Web Application | Hard | 500 | Dynamic | c0ffeeOverdose |
-| L2D Guess | Web Application | Medium | 300 | Static | c0ffeeOverdose |
-| students-list | Web Application | Normal | 200 | Static | c0ffeeOverdose |
-| Login SQL | Web Application | Easy | 100 | Dynamic | noonomyen |
-| CVE-2023-38831 | Forensics | Hard | 500 | Static | c0ffeeOverdose |
-| Matemi | Reverse | Hard | 500 | Static | FoxZFox |
+| Challenge | Catagory | Difficulty | Point | Flag | Build required | Author |
+| :- | :- | :- | :- | :- | :- | :- |
+| Sanity Check | Network | Test | 10 | Dynamic | Yes | noonomyen |
+| Mairu | Reverse | Normal | 200 | Static | No | FoxZFox |
+| QuickScale Studio | Web Application | Hard | 500 | Dynamic | Yes | c0ffeeOverdose |
+| L2D Guess | Web Application | Medium | 300 | Static | Yes | c0ffeeOverdose |
+| students-list | Web Application | Normal | 200 | Static | Yes | c0ffeeOverdose |
+| Login SQL | Web Application | Easy | 100 | Dynamic | Yes | noonomyen |
+| CVE-2023-38831 | Forensics | Hard | 500 | Static | Yes | c0ffeeOverdose |
+| Matemi | Reverse | Hard | 500 | Static | No | FoxZFox |
 
 ## Difficulty and Point
 
