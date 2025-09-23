@@ -22,6 +22,7 @@
 | students-list | Web Application | Normal | 200 | Static | c0ffeeOverdose |
 | Login SQL | Web Application | Easy | 100 | Dynamic | noonomyen |
 | CVE-2023-38831 | Forensics | Hard | 500 | Static | c0ffeeOverdose |
+| Matemi | Reverse | Hard | 500 | Static | FoxZFox |
 
 ## Difficulty and Point
 
