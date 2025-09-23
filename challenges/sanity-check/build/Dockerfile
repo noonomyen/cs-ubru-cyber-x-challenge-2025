@@ -1,4 +1,4 @@
-FROM icb-build:latest AS builder
+FROM icb-alpine-build:latest AS builder
 
 COPY sanity-check.c .
 
