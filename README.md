@@ -16,14 +16,15 @@
 | Challenge | Catagory | Difficulty | Point | Flag | Build required | Author |
 | :- | :- | :- | :- | :- | :- | :- |
 | [Sanity Check](./challenges/sanity-check) | Network | Test | 10 | Dynamic | Yes | noonomyen |
-| [Mairu](./challenges/mairu) | Reverse | Normal | 200 | Static | No | FoxZFox |
+| [Mairu](./challenges/mairu) | Reverse Engineering | Normal | 200 | Static | No | FoxZFox |
 | [QuickScale Studio](./challenges/quick-scale-studio) | Web Application | Hard | 500 | Dynamic | Yes | c0ffeeOverdose |
 | [L2D Guess](./challenges/l2d-guess) | Web Application | Medium | 300 | Static | Yes | c0ffeeOverdose |
 | [students-list](./challenges/students-list) | Web Application | Normal | 200 | Static | Yes | c0ffeeOverdose |
 | [Login SQL](./challenges/login-sql) | Web Application | Easy | 100 | Dynamic | Yes | noonomyen |
 | [CVE-2023-38831](./challenges/cve-2023-38831) | Forensics | Hard | 500 | Static | Yes | c0ffeeOverdose |
-| [Matemi](./challenges/matemi) | Reverse | Hard | 500 | Static | No | FoxZFox |
-| [Invisible](./challenges/invisible) | Reverse | Easy | 100 | Static | Pre | noonomyen |
+| [Matemi](./challenges/matemi) | Reverse Engineering | Hard | 500 | Static | No | FoxZFox |
+| [Invisible](./challenges/invisible) | Reverse Engineering | Easy | 100 | Static | Pre | noonomyen |
+| [Invisible 2](./challenges/invisible-2) | Reverse Engineering | Normal | 200 | Static | Pre | noonomyen |
 
 ## Difficulty and Point
 
