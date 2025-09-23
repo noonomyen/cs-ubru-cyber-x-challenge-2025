@@ -24,7 +24,7 @@ build() {
     docker build -t "$build_target$name" "$build_path"
 }
 
-build base build
+build base alpine-build
 build base nc-chall
 
 build chall sanity-check
