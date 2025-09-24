@@ -4,8 +4,7 @@
 | :-: | :-: | :-: |
 | Forensics | Normal | 200 |
 
-สมควร เขาใช้ linux เป็น native บนเครื่อง laptop ของเขา และเขาก็ได้ลองเล่นระบบ ssh แต่เขาดันลืมปิด และรหัส login เขานั้นก็ง่ายมาก พอไป connect เน็ตที่ ม เขาโดน Attacker scan เจอว่าเปิด port 22 ไว้ และ Attacker ก็ได้ Brute Force จนเข้าระบบได้ เมื่อเขารู้ตัวเขาก็รีบเปลี่ยนรหัสทันที แต่พอไปที่ ม ก็รู้สึกแปลกๆ เหมือน remote มา ทั้งทีเปลี่ยนรหัสแล้ว?
-
+สมชาย เขาใช้ Linux เป็น native บนเครื่อง laptop ของเขา และเขาก็ได้ลองเล่นระบบ SSH แต่เขาดันลืมปิด และรหัส login เขานั้นก็ง่ายมาก พอไป connect เน็ตที่ ม. เขาโดน Attacker scan เจอว่าเปิด port 22 ไว้ และ Attacker ก็ได้ brute force จนเข้าระบบได้ เมื่อเขารู้ตัวเขาก็รีบเปลี่ยนรหัสทันที แต่พอไปที่ ม. ก็รู้สึกแปลกๆ เหมือน remote มา ทั้งที่เปลี่ยนรหัสแล้ว?
 
 Format: `CSUBRU{...}`
 
@@ -21,16 +20,16 @@ Format: `CSUBRU{...}`
 
 | Name | Value |
 | :- | :- |
-| Title | Leak |
+| Title | Leak Password |
 | Type | Dynamic Container |
 | Category | Forensics |
-| Max Attempts Allowed |  |
+| Max Attempts Allowed | Unlimited |
 | Blood Bonus | Enable |
 | Container Image | ic-leak-password |
 | Service Port | 80 |
-| CPU Limit (0.1 CPUs) |  |
-| Memory Limit (MB) |  |
-| Storage Limit (MB) |  |
+| CPU Limit (0.1 CPUs) | 1 |
+| Memory Limit (MB) | 128 |
+| Storage Limit (MB) | 256 |
 
 [Configuration]
 
@@ -46,7 +45,7 @@ Format: `CSUBRU{...}`
 
 ## Analysis
 
-```
+```text
 เข้าเว็บ และตอบทีละคำถาม เพื่อให้ได้ Flag
 1. 192.168.35.1
 2. 192.168.35.2
