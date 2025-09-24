@@ -27,6 +27,7 @@
 | [Invisible 2](./challenges/invisible-2) | Reverse Engineering | Normal | 200 | Static | Pre | noonomyen |
 | [Weak Vault](./challenges/weak-vault) | Reverse Engineering | Easy | 100 | Static | Pre | noonomyen |
 | [Leak Password](./challenges/leak-password) | Forensics | Normal | 200 | Dynamic | Yes | c0ffeeOverdose |
+| [Oops 62](./challenges/oops62) | Programming | Hard | 500 | Static | No | noonomyen |
 
 ## Difficulty and Point
 
