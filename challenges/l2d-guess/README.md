@@ -4,7 +4,7 @@
 | :-: | :-: | :-: |
 | Web | Medium | 300 |
 
-ทีมอีเว้นท์ของสมศักดิ์ กำลังเตรียมงานแฟนมีตของ Blue Archive เขาเลยทำเว็บเกม **L2D Guess** ให้แฟน ๆ มาทายชื่อนักเรียนจากภาพ Live2D แบบสุ่ม 10 รอบ หากตอบถูกทุกข้อจะถูกยอมรับว่าเป็น "Blue Archive Big Fan" แต่ถ้าพลาดแม้แต่ข้อเดียวก็จบเกมทันที รีเฟรชปุ๊บเกมก็จะสุ่มชุดรูปใหม่พร้อมนับสถิติใหม่ทั้งหมด ทุกอย่างปกติหมด จนกระทั่งคุณนั้นลอง Scan ดู แล้วคุณละรู้ไหมว่าอะไรที่ผิดปกติ?
+ทีมอีเวนต์ของสมศักดิ์ กำลังเตรียมงานแฟนมีตของ Blue Archive เขาเลยทำเว็บเกม L2D Guess ให้แฟน ๆ มาทายชื่อนักเรียนจากภาพ Live2D แบบสุ่ม 10 รอบ หากตอบถูกทุกข้อจะถูกยอมรับว่าเป็น "Blue Archive Big Fan" แต่ถ้าพลาดแม้แต่ข้อเดียวก็จบเกมทันที รีเฟรชปุ๊บเกมก็จะสุ่มชุดรูปใหม่พร้อมนับสถิติใหม่ทั้งหมด ทุกอย่างปกติหมด จนกระทั่งคุณนั้นลอง Scan ดู แล้วคุณล่ะรู้ไหมว่าอะไรที่ผิดปกติ?
 
 Format: `CSUBRU{...}`
 
@@ -23,21 +23,17 @@ Format: `CSUBRU{...}`
 | Title | L2D-Guess |
 | Type | Static Container |
 | Category | Web |
-| Max Attempts Allowed |  |
-| Blood Bonus |  |
+| Max Attempts Allowed | Unlimited |
+| Blood Bonus | Enable |
 | Container Image | `ic-l2d-guess` |
 | Service Port | 80 |
-| CPU Limit (0.1 CPUs) |  |
-| Memory Limit (MB) |  |
-| Storage Limit (MB) |  |
+| CPU Limit (0.1 CPUs) | 1 |
+| Memory Limit (MB) | 256 |
+| Storage Limit (MB) | 256 |
 
 ### Flags
 
 - `CSUBRU{w3lc0m3_blu3_4rchiv3_bigf4n_im_w4i7ing_f0r_y0u_1337_muh4h4}`
-
-### Build
-
-- `docker build -t ic-l2d-guess build`
 
 ---
 
