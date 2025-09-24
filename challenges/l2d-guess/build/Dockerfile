@@ -1,25 +1,12 @@
-FROM debian:bookworm-slim
-
-ENV DEBIAN_FRONTEND=noninteractive \
-    APACHE_RUN_USER=www-data \
-    APACHE_RUN_GROUP=www-data
+ARG BASE_IMAGE=cs-ubru/apache-php-base:latest
+FROM ${BASE_IMAGE}
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        ca-certificates \
-        apache2 \
-        libapache2-mod-php8.2 \
-        php8.2-cli \
-        php8.2-common \
         php8.2-curl \
         php8.2-xml \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives /var/cache/apt/*
-
-RUN rm -rf /usr/share/doc/* /usr/share/man/* /usr/share/info/* \
-    && find /usr/share/locale -mindepth 1 -maxdepth 1 -type d ! -name 'en*' -exec rm -rf {} +
-
-RUN a2enmod rewrite
 
 COPY src/ /var/www/html/
 
@@ -27,12 +14,8 @@ RUN chown -R www-data:www-data /var/www/html \
     && rm -rf /var/www/html/index.html \
     && rm -rf /var/log/apache2/*
 
-COPY init.sh /init.sh
+COPY challenge-entrypoint.sh /challenge-entrypoint.sh
 
-RUN chmod +x /init.sh
+RUN chmod +x /challenge-entrypoint.sh
 
-WORKDIR /var/www/html
-
-EXPOSE 80
-
-CMD ["/init.sh"]
+CMD ["/challenge-entrypoint.sh"]
