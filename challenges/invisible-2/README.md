@@ -10,12 +10,6 @@ Format: `CSUBRU{...}`
 
 ---
 
-## Hints
-
-- ฉันตั้งใจทำให้มันขาดนะ เอามาต่อกันสิ
-
----
-
 ## Configuration
 
 | Name | Value |
