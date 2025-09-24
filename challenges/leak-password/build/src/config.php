@@ -7,15 +7,15 @@ if (!defined('APP_BOOTSTRAPPED')) {
 }
 
 return [
-    'title' => 'CVE-2023-38831',
+    'title' => 'Leak Password',
     'hero_badge' => 'B-SOC Case File',
     'hero_description' => 'Trace the adversary\'s footprint and answer each investigative step in order. Close all stages to secure the flag for your team.',
     'worksheet_title' => 'Incident Response Worksheet',
     'download' => [
         'href' => 'download.php',
         'label' => 'Download log',
-        'title' => 'Download LogFile.zip',
-        'filename' => 'LogFile.zip',
+        'title' => 'Download authLog.zip',
+        'filename' => 'authLog.zip',
     ],
     'rate_limit' => [
         'limit' => 30,
