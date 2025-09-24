@@ -27,6 +27,7 @@ build() {
 build base alpine-build
 build base debian-build
 build base nc-chall
+build base apache-php
 
 build chall sanity-check
 build chall quick-scale-studio
@@ -34,3 +35,4 @@ build chall l2d-guess
 build chall students-list
 build chall login-sql
 build chall cve-2023-38831
+build chall leak-password
