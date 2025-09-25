@@ -33,6 +33,7 @@
 | [Not Strict File Upload](./challenges/not-strict-file-upload) | Forensics | Easy | 100 | Dynamic | Yes | c0ffeeOverdose |
 | [FTP Easy](./challenges/ftp-easy) | Network | Easy | 100 | Static | No | c0ffeeOverdose |
 | [Ah My Eyes](./challenges/ah-my-eyes) | Cryptography | Medium | 300 | Static | No | c0ffeeOverdose |
+| [Buta Pen](./challenges/buta-pen) | Cryptography | Easy | 100 | Static | No | c0ffeeOverdose |
 
 ## Difficulty and Point
 
