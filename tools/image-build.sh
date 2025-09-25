@@ -36,3 +36,4 @@ build chall students-list
 build chall login-sql
 build chall cve-2023-38831
 build chall leak-password
+build chall ruby-on-rails
