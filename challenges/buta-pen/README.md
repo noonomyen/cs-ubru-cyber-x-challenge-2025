@@ -1,8 +1,8 @@
-# Ah My Eyes
+# Buta Pen
 
 | Category | Difficulty | Point |
 | :-: | :-: | :-: |
-| Cryptography | Medium | 300 |
+| Cryptography | Easy | 100 |
 
 Format: `CSUBRU{...}`
 
@@ -12,7 +12,7 @@ Format: `CSUBRU{...}`
 
 | Name | Value |
 | :- | :- |
-| Title | Ah My Eyes |
+| Title | Buta Pen |
 | Type | Static Attachments |
 | Category | Crypto |
 | Max Attempts Allowed | unlimited |
@@ -20,14 +20,16 @@ Format: `CSUBRU{...}`
 
 ### Attachments
 
-- `ah-my-eyes.txt`
+- `buta-pen.png`
 
 ### Flags
 
-- `CSUBRU{br4infuck_4hhhh_my_3y3}`
+- `CSUB{RUPIGPENENCRYPTED}`
 
 ---
 
 ## Analysis
 
-<https://www.boxentriq.com/code-breaking/pigpen-cipher>
+ถอดด้วย base45
+และ xor key 1
+และ brainfuck
