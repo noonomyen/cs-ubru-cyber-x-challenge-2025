@@ -1,0 +1,268 @@
+<?php
+declare(strict_types=1);
+
+if (!defined('APP_BOOTSTRAPPED')) {
+    http_response_code(403);
+    exit('Invalid bootstrap sequence.');
+}
+
+/**
+ * @return array{
+ *     title:string,
+ *     hero_badge?:string,
+ *     hero_description?:string,
+ *     worksheet_title?:string,
+ *     download?:array<string, mixed>,
+ *     rate_limit?:array<string, int>,
+ *     flag?:string|null,
+ *     questions:array<int, array{prompt:string, answer:string|array<int, string>, placeholder?:string, helper?:string}>
+ * }
+ */
+function loadChallengeConfig(): array
+{
+    static $config = null;
+
+    if ($config !== null) {
+        return $config;
+    }
+
+    $defaults = [
+        'title' => 'Blue Team Incident Desk',
+        'hero_badge' => 'B-SOC Case File',
+        'hero_description' => 'Trace the adversary\'s footprint and answer each investigative step in order. Close all stages to secure the flag for your team.',
+        'worksheet_title' => 'Incident Response Worksheet',
+        'download' => [
+            'href' => 'download.php',
+            'label' => 'Download log',
+            'title' => 'Download LogFile.zip',
+            'filename' => 'LogFile.zip',
+        ],
+        'rate_limit' => [
+            'limit' => 30,
+            'window' => 30,
+        ],
+        'flag' => null,
+        'questions' => [],
+    ];
+
+    $configPath = __DIR__ . '/config.php';
+    $loaded = [];
+    if (is_file($configPath)) {
+        $candidate = require $configPath;
+        if (is_array($candidate)) {
+            $loaded = $candidate;
+        }
+    }
+
+    $merged = array_replace_recursive($defaults, $loaded);
+
+    if (!isset($merged['download']) || !is_array($merged['download'])) {
+        $merged['download'] = $defaults['download'];
+    } else {
+        $merged['download'] = array_replace($defaults['download'], $merged['download']);
+    }
+
+    if (!isset($merged['rate_limit']) || !is_array($merged['rate_limit'])) {
+        $merged['rate_limit'] = $defaults['rate_limit'];
+    } else {
+        $limit = isset($merged['rate_limit']['limit']) ? (int) $merged['rate_limit']['limit'] : $defaults['rate_limit']['limit'];
+        $window = isset($merged['rate_limit']['window']) ? (int) $merged['rate_limit']['window'] : $defaults['rate_limit']['window'];
+        $merged['rate_limit'] = [
+            'limit' => max(0, $limit),
+            'window' => max(0, $window),
+        ];
+    }
+
+    if (!isset($merged['questions']) || !is_array($merged['questions'])) {
+        $merged['questions'] = [];
+    }
+
+    $config = $merged;
+
+    return $config;
+}
+
+/**
+ * @return array<int, array{prompt:string, answer:string|array<int, string>, placeholder?:string, helper?:string}>
+ */
+function getQuestions(): array
+{
+    $config = loadChallengeConfig();
+    /** @var array<int, array{prompt:string, answer:string|array<int, string>, placeholder?:string, helper?:string}> $questions */
+    $questions = $config['questions'];
+
+    return array_values(array_filter($questions, static function ($question): bool {
+        if (!is_array($question) || !isset($question['prompt'])) {
+            return false;
+        }
+
+        $promptIsValid = is_string($question['prompt']);
+
+        $hasAnswers = false;
+        if (array_key_exists('answer', $question)) {
+            $candidate = $question['answer'];
+            if (is_string($candidate)) {
+                $hasAnswers = trim($candidate) !== '';
+            } elseif (is_array($candidate)) {
+                foreach ($candidate as $value) {
+                    if (is_string($value) && trim($value) !== '') {
+                        $hasAnswers = true;
+                        break;
+                    }
+                }
+            }
+        } elseif (isset($question['answers']) && is_array($question['answers'])) {
+            foreach ($question['answers'] as $value) {
+                if (is_string($value) && trim($value) !== '') {
+                    $hasAnswers = true;
+                    break;
+                }
+            }
+        }
+
+        return $promptIsValid && $hasAnswers;
+    }));
+}
+
+function normalizeAnswer(string $answer): string
+{
+    $normalized = strtolower(trim($answer));
+    $normalized = preg_replace('/[^a-z0-9ก-๙]+/u', '', $normalized);
+
+    return $normalized ?? '';
+}
+
+/**
+ * @param string|array<int, string> $expectedAnswer
+ */
+function answersMatch(string $userAnswer, string|array $expectedAnswer): bool
+{
+    if (is_array($expectedAnswer)) {
+        foreach ($expectedAnswer as $candidate) {
+            if (!is_string($candidate)) {
+                continue;
+            }
+            if (answersMatch($userAnswer, $candidate)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    if ($expectedAnswer === '') {
+        return false;
+    }
+
+    return hash_equals(normalizeAnswer($expectedAnswer), normalizeAnswer($userAnswer));
+}
+
+/**
+ * @param array<string, mixed> $state
+ * @return array{index:int, completed:bool, failed:bool, token:string}
+ */
+function ensureValidState(?array $state, int $questionCount): array
+{
+    $token = bin2hex(random_bytes(16));
+    $default = [
+        'index' => 0,
+        'completed' => false,
+        'failed' => false,
+        'token' => $token,
+    ];
+
+    if (!is_array($state)) {
+        return $default;
+    }
+
+    if (!isset($state['index'], $state['completed'], $state['failed'], $state['token'])) {
+        return $default;
+    }
+
+    $index = is_int($state['index']) ? $state['index'] : 0;
+    $completed = (bool) $state['completed'];
+    $failed = (bool) $state['failed'];
+    $previousToken = is_string($state['token']) && $state['token'] !== '' ? $state['token'] : $token;
+
+    if ($index < 0 || $index > $questionCount) {
+        $index = 0;
+        $completed = false;
+        $failed = false;
+    }
+
+    return [
+        'index' => $index,
+        'completed' => $completed,
+        'failed' => $failed,
+        'token' => $previousToken,
+    ];
+}
+
+function regenerateToken(array &$state): void
+{
+    $state['token'] = bin2hex(random_bytes(16));
+}
+
+function clearProgress(): void
+{
+    $_SESSION['state'] = null;
+    unset($_SESSION['__answer_attempts']);
+    session_regenerate_id(true);
+}
+
+function checkAnswerRateLimit(int $limit = 30, int $windowSeconds = 30): bool
+{
+    if ($limit <= 0 || $windowSeconds <= 0) {
+        return true;
+    }
+
+    $now = microtime(true);
+    $threshold = $now - $windowSeconds;
+    $key = '__answer_attempts';
+
+    $attempts = $_SESSION[$key] ?? [];
+    if (!is_array($attempts)) {
+        $attempts = [];
+    }
+
+    $filtered = [];
+    foreach ($attempts as $timestamp) {
+        if (!is_numeric($timestamp)) {
+            continue;
+        }
+        $time = (float) $timestamp;
+        if ($time >= $threshold) {
+            $filtered[] = $time;
+        }
+    }
+
+    if (count($filtered) >= $limit) {
+        $_SESSION[$key] = $filtered;
+        return false;
+    }
+
+    $filtered[] = $now;
+    $_SESSION[$key] = $filtered;
+
+    return true;
+}
+
+function flagValue(): string
+{
+    $config = loadChallengeConfig();
+    $configuredFlag = $config['flag'] ?? null;
+    if (is_string($configuredFlag) && trim($configuredFlag) !== '') {
+        return trim($configuredFlag);
+    }
+
+    $flag = getenv('GZCTF_FLAG');
+    if (is_string($flag) && trim($flag) !== '') {
+        return trim($flag);
+    }
+
+    return 'CSUBRU{DUMMY}';
+}
+
+function esc(string $value): string
+{
+    return htmlspecialchars($value, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+}
