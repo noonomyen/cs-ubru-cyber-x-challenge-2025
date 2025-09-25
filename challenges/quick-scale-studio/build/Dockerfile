@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=cs-ubru/apache-php-base:latest
+ARG BASE_IMAGE=icb-apache-php:latest
 
 FROM debian:bookworm-slim AS imagemagick-builder
 
