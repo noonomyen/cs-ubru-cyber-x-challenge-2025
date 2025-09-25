@@ -1,4 +1,4 @@
-FROM icb-build:latest
+FROM icb-alpine-build:latest
 
 RUN apk add --no-cache socat \
     && mkdir -p /app
