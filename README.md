@@ -31,6 +31,7 @@
 | [Ask Real](./challenges/ask-real) | Cryptography | Normal | 200 | Static | No | noonomyen |
 | [Ruby On Rails](./challenges/ruby-on-rails) | Forensics | Medium | 300 | Dynamic | Yes | c0ffeeOverdose |
 | [Not Strict File Upload](./challenges/not-strict-file-upload) | Forensics | Easy | 100 | Dynamic | Yes | c0ffeeOverdose |
+| [FTP Easy](./challenges/ftp-easy) | Network | Easy | 100 | Static | No | c0ffeeOverdose |
 
 ## Difficulty and Point
 
