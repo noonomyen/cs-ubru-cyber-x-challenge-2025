@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gzctf-db
+  namespace: gzctf-server
+  labels:
+    app: gzctf-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gzctf-db
+  template:
+    metadata:
+      labels:
+        app: gzctf-db
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: node0
+      containers:
+      - name: postgres
+        image: postgres:alpine
+        ports:
+          - containerPort: 5432
+        env:
+          - name: POSTGRES_PASSWORD
+            value: [DEPLOY:SECRET]
+        volumeMounts:
+          - name: db
+            mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: db
+          persistentVolumeClaim:
+            claimName: gzctf-db-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gzctf-db
+  namespace: gzctf-server
+spec:
+  selector:
+    app: gzctf-db
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432

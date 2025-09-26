@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gzctf
+  namespace: gzctf-server
+  labels:
+    app: gzctf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gzctf
+  template:
+    metadata:
+      labels:
+        app: gzctf
+    spec:
+      serviceAccountName: gzctf-sa
+      nodeSelector:
+        kubernetes.io/hostname: node0
+      containers:
+      - name: gzctf
+        image: gztime/gzctf:latest
+        env:
+          - name: GZCTF_ADMIN_PASSWORD
+            value: "[DEPLOY:SECRET]"
+          - name: LC_ALL
+            value: en_US.UTF-8
+        ports:
+          - containerPort: 8080
+            name: http
+          - containerPort: 3000
+            name: metrics
+        volumeMounts:
+          - name: gzctf-files
+            mountPath: /app/files
+          - name: gzctf-config
+            mountPath: /app/appsettings.json
+            subPath: appsettings.json
+      volumes:
+        - name: gzctf-files
+          persistentVolumeClaim:
+            claimName: gzctf-files-pvc
+        - name: gzctf-config
+          configMap:
+            name: gzctf-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gzctf
+  namespace: gzctf-server
+spec:
+  type: NodePort
+  selector:
+    app: gzctf
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30080
+      protocol: TCP
