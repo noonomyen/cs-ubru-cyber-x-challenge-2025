@@ -4,9 +4,9 @@
 | :-: | :-: | :-: |
 | Network | Medium | 300 |
 
-Format: `CSUBRU{...}`
-
 ไฟล์บางอย่างถูกขโมยไป ได้ยังไง? ทั้งที่ ใน log ก็เห็นแค่ DNS Protocal หนิ
+
+Format: `CSUBRU{...}`
 
 ---
 
