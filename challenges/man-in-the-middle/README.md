@@ -4,15 +4,15 @@
 | :-: | :-: | :-: |
 | Network | Normal | 200 |
 
-Format: `CSUBRU{username:password}`
-
 หา username password ที่มี role admin
+
+Format: `CSUBRU{MD5(username:password)}`
 
 ---
 
 ## Hints
 
-- hint: ตัวอย่าง flag CSUBRU{admin:admin1234}
+- hint: ตัวอย่างคำตอบ admin:admin1234 แล้วให้ทำการ MD5 แล้วตอบใน CSUBRU{...}
 
 ---
 
@@ -37,7 +37,7 @@ Format: `CSUBRU{username:password}`
 
 ### Flags
 
-- `CSUBRU{adminlawza007:nihahaha3389}`
+- `CSUBRU{b4daea07a5fd166cc6f53db159b297a2}`
 
 ---
 
@@ -48,3 +48,6 @@ strings man-in-the-middle.pcapng | grep "adminlawza007"
 {"username":"adminlawza007","password":"nihahaha3389"}
 {"username":"adminlawza007","password":"nihahaha3389"}
 ```
+
+Answer: `adminlawza007:nihahaha3389`
+MD5: `b4daea07a5fd166cc6f53db159b297a2`
