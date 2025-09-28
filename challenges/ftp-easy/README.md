@@ -20,7 +20,7 @@ Format: `CSUBRU{...}`
 | :- | :- |
 | Title | FTP Easy |
 | Type | Static Attachments |
-| Category | Network |
+| Category | Forensics |
 | Max Attempts Allowed | Unlimited |
 | Blood Bonus | Enable |
 | Container Image | N/A |
