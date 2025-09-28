@@ -23,7 +23,7 @@ Format: `CSUBRU{MinSpeed:Duration,MaxSpeed:Duration}`
 | :- | :- |
 | Title | Nuclear At Home |
 | Type | Static Attachments |
-| Category | Network |
+| Category | Forensics |
 | Max Attempts Allowed | Unlimited |
 | Blood Bonus | Enable |
 | Container Image | N/A |
@@ -61,7 +61,7 @@ Format: `CSUBRU{MinSpeed:Duration,MaxSpeed:Duration}`
 ```
 
 ```txt
-tshark -r /tmp/x.pcapng \                                     
+tshark -r /tmp/x.pcapng \
   -Y "s7comm && s7comm.param.func == 0x05 && s7comm.param.item.address == 0x000020" \
   -T fields -e frame.number -e frame.time_relative -e s7comm.resp.data
 เวลาให้เอา เวลาของ frame ที่เริ่ม set - frame ก่อนจะ set

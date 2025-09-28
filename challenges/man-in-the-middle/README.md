@@ -22,7 +22,7 @@ Format: `CSUBRU{username:password}`
 | :- | :- |
 | Title | Man In The Middle |
 | Type | Static Attachments |
-| Category | Network |
+| Category | Forensics |
 | Max Attempts Allowed | Unlimited |
 | Blood Bonus | Enable |
 | Container Image | N/A |
