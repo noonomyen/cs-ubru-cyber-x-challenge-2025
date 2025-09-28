@@ -33,7 +33,7 @@ no hint
 
 ### Flags
 
-- `CSUBRU{...}`
+- `CSUBRU{cv3-2022-44268-700-34sy_[TEAM_HASH]}`
 
 ---
 
