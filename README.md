@@ -35,6 +35,7 @@
 | [Ah My Eyes](./challenges/ah-my-eyes) | Cryptography | Medium | 300 | Static | No | c0ffeeOverdose |
 | [Buta Pen](./challenges/buta-pen) | Cryptography | Easy | 100 | Static | No | c0ffeeOverdose |
 | [Inspiration](./challenges/inspiration) | Cryptography | Hard | 500 | Static | No | c0ffeeOverdose |
+| [Nuclear At Home](./challenges/nuclear-at-home) | Network | Hard | 500 | Static | No | c0ffeeOverdose |
 
 ## Difficulty and Point
 
