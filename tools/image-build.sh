@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x
+set -ex
 
 build() {
     local type="$1"
@@ -22,6 +22,11 @@ build() {
     echo "Building [$type/$name] image=$build_target$name, path=$build_path"
 
     docker build -t "$build_target$name" "$build_path"
+
+    if [ -n "${REGISTRY:-}" ]; then
+        docker tag "$build_target$name" "${REGISTRY}/$build_target$name"
+        docker push "${REGISTRY}/$build_target$name"
+    fi
 }
 
 build base alpine-build
