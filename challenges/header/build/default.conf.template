@@ -1,0 +1,10 @@
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name _;
+
+    add_header FLAG_IS_LEAKED "${GZCTF_FLAG}";
+
+    root /usr/share/nginx/html;
+}
