@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS UBRU Cyber X Challenge 2025 CTF</title>
+    <style>
+        :root {
+            --bg: #0b0f13;
+            --panel: #0f1418;
+            --accent: #00ddb3;
+            --muted: #9aa6b2;
+            --glass: rgba(255, 255, 255, 0.03);
+            --mono: 'Segoe UI Mono', 'Roboto Mono', 'SFMono-Regular', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            background: radial-gradient(1200px 600px at 10% 10%, rgba(0, 221, 179, 0.03), transparent),
+                radial-gradient(900px 400px at 90% 90%, rgba(0, 119, 255, 0.02), transparent),
+                var(--bg);
+            color: #e6eef3;
+            font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 920px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(6px);
+            border-radius: 14px;
+            padding: 48px;
+            box-shadow: 0 10px 40px rgba(2, 6, 10, 0.6);
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 8px;
+        }
+
+        .badge {
+            width: 72px;
+            height: 72px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent), #006bff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: var(--mono);
+            font-size: 20px;
+            color: #051014;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6), 0 2px 8px rgba(0, 221, 179, 0.06) inset;
+        }
+
+        h1 {
+            font-size: 22px;
+            letter-spacing: 0.6px;
+            margin: 0;
+            color: #e9fbf6;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 6px
+        }
+
+        .content {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 8px;
+        }
+
+        .panel {
+            background: var(--panel);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.02);
+            box-shadow: 0 6px 18px rgba(2, 6, 10, 0.45);
+        }
+
+        .what-ctf {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .what-ctf p {
+            color: var(--muted);
+            line-height: 1.6
+        }
+
+        .cta {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-top: 6px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            font-weight: 600;
+            background: transparent;
+            cursor: pointer;
+            color: var(--accent);
+            font-family: var(--mono)
+        }
+
+        .muted-note {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.12);
+            font-family: var(--mono);
+            padding-top: 8px;
+            text-align: center
+        }
+
+        .foot {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-top: 12px;
+            flex-wrap: wrap
+        }
+
+        .meta {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        @media (min-width:700px) {
+            .content {
+                grid-template-columns: 1fr 420px
+            }
+
+            .card {
+                padding: 48px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="card" role="main">
+        <div class="logo">
+            <div class="badge">CTF</div>
+            <div>
+                <h1>CS UBRU Cyber X Challenge 2025 CTF</h1>
+                <div class="subtitle">Hosted by CS UBRU - Computer Security Competition</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <section class="panel">
+                <h2 style="margin-bottom:10px;color:#e9fbf6">About CTF</h2>
+                <div class="what-ctf">
+                    <p>Capture The Flag (CTF) is a computer security competition where teams or individuals solve
+                        challenges across categories such as Web, Crypto, Reverse Engineering, Forensics, Pwn, and
+                        Networking to discover hidden flags; challenges exercise problem solving, coding, and analysis
+                        skills using tools like debuggers, network sniffers, and custom scripts.</p>
+                </div>
+
+                <div class="cta">
+                    <button class="btn" onclick="alert('Good luck!')">Start</button>
+                    <button class="btn" onclick="copyInfo()">Copy details</button>
+                </div>
+
+            </section>
+
+            <aside class="panel">
+                <h3 style="margin-bottom:8px;color:#e9fbf6">Event Details</h3>
+                <p class="meta">Date: October XX-XX, 2025</p>
+                <p style="margin-top:8px;color:var(--muted);line-height:1.5">Format: Jeopardy-style / hybrid
+                    challenges<br>Duration: XX hours (per designated round)</p>
+
+                <div style="margin-top:14px;color:var(--muted);font-size:13px">
+                    <strong>Note to participants:</strong>
+                    <div style="margin-top:6px">Do not attack unauthorized hosts and follow the competition rules.</div>
+                </div>
+
+            </aside>
+        </div>
+
+        <div class="foot">
+            <div class="meta">CS UBRU • Cyber X Challenge 2025</div>
+        </div>
+    </main>
+</body>
+
+</html>
