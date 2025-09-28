@@ -32,4 +32,4 @@ Format: `CSUBRU{...}`
 
 ## Analysis
 
-ถอด base64 20 รอบ
+ถอด base64 40 รอบ
