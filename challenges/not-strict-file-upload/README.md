@@ -25,7 +25,7 @@ Format: `CSUBRU{...}`
 | Category | Forensics |
 | Max Attempts Allowed | Unlimited |
 | Blood Bonus | Enable |
-| Container Image | not-strict-file-upload |
+| Container Image | ic-not-strict-file-upload |
 | Service Port | 80 |
 | CPU Limit (0.1 CPUs) | 1 |
 | Memory Limit (MB) | 128 |

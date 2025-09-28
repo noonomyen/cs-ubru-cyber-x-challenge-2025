@@ -2,7 +2,7 @@
 
 | Category | Difficulty | Point |
 | :-: | :-: | :-: |
-| Reverse | Normal | 200 |
+| Reverse Engineering | Normal | 200 |
 
 รู้ได้ไง?
 
