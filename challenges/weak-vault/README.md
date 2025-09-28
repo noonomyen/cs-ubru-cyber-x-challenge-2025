@@ -2,7 +2,7 @@
 
 | Category | Difficulty | Point |
 | :-: | :-: | :-: |
-| Reverse | Easy | 100 |
+| Reverse Engineering | Easy | 100 |
 
 ห้องนิรภัยนี้ค่อนข้างอ่อนแอมาก จนใครๆก็สามารถเปิดมันได้ง่ายๆ
 
