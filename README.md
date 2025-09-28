@@ -37,6 +37,7 @@
 | [Inspiration](./challenges/inspiration) | Cryptography | Hard | 500 | Static | No | c0ffeeOverdose |
 | [Nuclear At Home](./challenges/nuclear-at-home) | Network | Hard | 500 | Static | No | c0ffeeOverdose |
 | [Header](./challenges/header) | Web Application | Easy | 100 | Dynamic | Yes | noonomyen |
+| [Man In The Middle](./challenges/man-in-the-middle) | Network | Normal | 200 | Static | No | c0ffeeOverdose |
 
 ## Difficulty and Point
 
