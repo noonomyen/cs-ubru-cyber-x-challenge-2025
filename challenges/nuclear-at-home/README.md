@@ -23,7 +23,7 @@ Format: `CSUBRU{MinSpeed:Duration,MaxSpeed:Duration}`
 | :- | :- |
 | Title | Nuclear At Home |
 | Type | Static Attachments |
-| Category | Forensics |
+| Category | Network |
 | Max Attempts Allowed | Unlimited |
 | Blood Bonus | Enable |
 | Container Image | N/A |
