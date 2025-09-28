@@ -40,6 +40,7 @@
 | [Man In The Middle](./challenges/man-in-the-middle) | Network | Normal | 200 | Static | No | c0ffeeOverdose |
 | [Weak Seed](./challenges/weak-seed) | Programming | Medium | 300 | Static | Yes | noonomyen |
 | [Stolen File](./challenges/stolen-file) | Network | Medium | 300 | Static | No | c0ffeeOverdose |
+| [I Hacked It](./challenges/i-hacked-it) | Network | Normal | 200 | Dynamic | Yes | noonomyen |
 
 ## Difficulty and Point
 
