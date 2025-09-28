@@ -44,3 +44,4 @@ build chall leak-password
 build chall ruby-on-rails
 build chall not-strict-file-upload
 build chall header
+build chall i-hacked-it
