@@ -24,7 +24,7 @@ Format: `CSUBRU{...}`
 
 ### Flags
 
-- `CSUB{RUPIGPENENCRYPTED}`
+- `CSUBRU{RUPIGPENENCRYPTED}`
 
 ---
 
