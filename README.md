@@ -43,6 +43,7 @@
 | [I Hacked It](./challenges/i-hacked-it) | Network | Normal | 200 | Dynamic | Yes | noonomyen |
 | [Not In Video](./challenges/not-in-video) | Steganography | Easy | 100 | Static | No | noonomyen |
 | [Inside](./challenges/inside) | Steganography | Normal | 200 | Static | No | noonomyen |
+| [Login](./challenges/login) | Binary Exploitation | Easy | 100 | Dynamic | Yes | noonomyen |
 
 ## Difficulty and Point
 
