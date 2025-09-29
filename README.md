@@ -44,6 +44,7 @@
 | [Not In Video](./challenges/not-in-video) | Steganography | Easy | 100 | Static | No | noonomyen |
 | [Inside](./challenges/inside) | Steganography | Normal | 200 | Static | No | noonomyen |
 | [Login](./challenges/login) | Binary Exploitation | Easy | 100 | Dynamic | Yes | noonomyen |
+| [Jump](./challenges/jump) | Binary Exploitation | Medium | 300 | Dynamic | Yes | noonomyen |
 
 ## Difficulty and Point
 
