@@ -46,3 +46,4 @@ build chall not-strict-file-upload
 build chall header
 build chall i-hacked-it
 build chall login
+build chall jump
