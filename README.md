@@ -42,6 +42,7 @@
 | [Stolen File](./challenges/stolen-file) | Network | Medium | 300 | Static | No | c0ffeeOverdose |
 | [I Hacked It](./challenges/i-hacked-it) | Network | Normal | 200 | Dynamic | Yes | noonomyen |
 | [Not In Video](./challenges/not-in-video) | Steganography | Easy | 100 | Static | No | noonomyen |
+| [Inside](./challenges/inside) | Steganography | Normal | 200 | Static | No | noonomyen |
 
 ## Difficulty and Point
 
