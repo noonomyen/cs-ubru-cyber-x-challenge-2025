@@ -24,12 +24,10 @@ Format: `CSUBRU{...}`
 
 ### Flags
 
-- `CSUBRU{RUPIGPENENCRYPTED}`
+- `CSUBRU{PIGPENENCRYPTED}`
 
 ---
 
 ## Analysis
 
-ถอดด้วย base45
-และ xor key 1
-และ brainfuck
+<https://www.boxentriq.com/code-breaking/pigpen-cipher>

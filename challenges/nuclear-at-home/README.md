@@ -13,7 +13,7 @@ Format: `CSUBRU{MD5(MinSpeed:Duration,MaxSpeed:Duration)}`
 
 ## Hints
 
-- hint: ตัวอย่าง flag CSUBRU{1:600,100:900}
+- hint: ตัวอย่าง flag CSUBRU{MD5(1:600,100:900)}   CSUBRU{cc8386c2a46998cff6ba739f27b9ca1a}
 
 ---
 
