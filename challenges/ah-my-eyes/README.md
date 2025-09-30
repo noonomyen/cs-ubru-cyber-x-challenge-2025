@@ -30,4 +30,6 @@ Format: `CSUBRU{...}`
 
 ## Analysis
 
-<https://www.boxentriq.com/code-breaking/pigpen-cipher>
+ถอดด้วย base45
+และ xor key 1
+และ brainfuck
