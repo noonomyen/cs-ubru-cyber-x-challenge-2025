@@ -1,5 +1,9 @@
 # CS UBRU Cyber X Challenge 2025 CTF
 
+What is “CS UBRU Cyber X Challenge 2025 CTF”?
+
+This event is a closed CTF (Capture The Flag) competition organized within the Faculty of Computer Science at Ubon Ratchathani Rajabhat University. Its main goal was to find and encourage students who are interested in cybersecurity. The competition has already concluded successfully.
+
 ## Categories
 
 - Cryptography
