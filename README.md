@@ -19,36 +19,36 @@ This event is a closed CTF (Capture The Flag) competition organized within the F
 
 | Challenge | Catagory | Difficulty | Point | Flag | Build required | Author |
 | :- | :- | :- | :- | :- | :- | :- |
-| [Sanity Check](./challenges/sanity-check) | Network | Test | 10 | Dynamic | Yes | noonomyen |
-| [Mairu](./challenges/mairu) | Reverse Engineering | Normal | 200 | Static | No | FoxZFox |
-| [QuickScale Studio](./challenges/quick-scale-studio) | Web Application | Hard | 500 | Dynamic | Yes | c0ffeeOverdose |
-| [L2D Guess](./challenges/l2d-guess) | Web Application | Medium | 300 | Static | Yes | c0ffeeOverdose |
-| [students-list](./challenges/students-list) | Web Application | Normal | 200 | Dynamic | Yes | c0ffeeOverdose |
-| [Login SQL](./challenges/login-sql) | Web Application | Easy | 100 | Dynamic | Yes | noonomyen |
-| [CVE-2023-38831](./challenges/cve-2023-38831) | Forensics | Hard | 500 | Dynamic | Yes | c0ffeeOverdose |
-| [Matemi](./challenges/matemi) | Reverse Engineering | Hard | 500 | Static | No | FoxZFox |
-| [Invisible](./challenges/invisible) | Reverse Engineering | Easy | 100 | Static | Pre | noonomyen |
-| [Invisible 2](./challenges/invisible-2) | Reverse Engineering | Normal | 200 | Static | Pre | noonomyen |
-| [Weak Vault](./challenges/weak-vault) | Reverse Engineering | Easy | 100 | Static | Pre | noonomyen |
-| [Leak Password](./challenges/leak-password) | Forensics | Normal | 200 | Dynamic | Yes | c0ffeeOverdose |
-| [Oops 62](./challenges/oops62) | Programming | Hard | 500 | Static | No | noonomyen |
-| [Ask Real](./challenges/ask-real) | Cryptography | Normal | 200 | Static | No | noonomyen |
-| [Ruby On Rails](./challenges/ruby-on-rails) | Forensics | Medium | 300 | Dynamic | Yes | c0ffeeOverdose |
-| [Not Strict File Upload](./challenges/not-strict-file-upload) | Forensics | Easy | 100 | Dynamic | Yes | c0ffeeOverdose |
-| [FTP Easy](./challenges/ftp-easy) | Network | Easy | 100 | Static | No | c0ffeeOverdose |
-| [Ah My Eyes](./challenges/ah-my-eyes) | Cryptography | Medium | 300 | Static | No | c0ffeeOverdose |
-| [Buta Pen](./challenges/buta-pen) | Cryptography | Easy | 100 | Static | No | c0ffeeOverdose |
-| [Inspiration](./challenges/inspiration) | Cryptography | Hard | 500 | Static | No | c0ffeeOverdose |
-| [Nuclear At Home](./challenges/nuclear-at-home) | Network | Hard | 500 | Static | No | c0ffeeOverdose |
-| [Header](./challenges/header) | Web Application | Easy | 100 | Dynamic | Yes | noonomyen |
-| [Man In The Middle](./challenges/man-in-the-middle) | Network | Normal | 200 | Static | No | c0ffeeOverdose |
-| [Weak Seed](./challenges/weak-seed) | Programming | Medium | 300 | Static | Yes | noonomyen |
-| [Stolen File](./challenges/stolen-file) | Network | Medium | 300 | Static | No | c0ffeeOverdose |
-| [I Hacked It](./challenges/i-hacked-it) | Network | Normal | 200 | Dynamic | Yes | noonomyen |
-| [Not In Video](./challenges/not-in-video) | Steganography | Easy | 100 | Static | No | noonomyen |
-| [Inside](./challenges/inside) | Steganography | Normal | 200 | Static | No | noonomyen |
-| [Login](./challenges/login) | Binary Exploitation | Easy | 100 | Dynamic | Yes | noonomyen |
-| [Jump](./challenges/jump) | Binary Exploitation | Medium | 300 | Dynamic | Yes | noonomyen |
+| [Sanity Check](./challenges/sanity-check) | Network | Test | 10 | Dynamic | Yes | [noonomyen](https://github.com/noonomyen) |
+| [Mairu](./challenges/mairu) | Reverse Engineering | Normal | 200 | Static | No | [FoxZFox](https://github.com/FoxZFox) |
+| [QuickScale Studio](./challenges/quick-scale-studio) | Web Application | Hard | 500 | Dynamic | Yes | [c0ffeeOverdose](https://github.com/c0ffeeOverdose) |
+| [L2D Guess](./challenges/l2d-guess) | Web Application | Medium | 300 | Static | Yes | [c0ffeeOverdose](https://github.com/c0ffeeOverdose) |
+| [students-list](./challenges/students-list) | Web Application | Normal | 200 | Dynamic | Yes | [c0ffeeOverdose](https://github.com/c0ffeeOverdose) |
+| [Login SQL](./challenges/login-sql) | Web Application | Easy | 100 | Dynamic | Yes | [noonomyen](https://github.com/noonomyen) |
+| [CVE-2023-38831](./challenges/cve-2023-38831) | Forensics | Hard | 500 | Dynamic | Yes | [c0ffeeOverdose](https://github.com/c0ffeeOverdose) |
+| [Matemi](./challenges/matemi) | Reverse Engineering | Hard | 500 | Static | No | [FoxZFox](https://github.com/FoxZFox) |
+| [Invisible](./challenges/invisible) | Reverse Engineering | Easy | 100 | Static | Pre | [noonomyen](https://github.com/noonomyen) |
+| [Invisible 2](./challenges/invisible-2) | Reverse Engineering | Normal | 200 | Static | Pre | [noonomyen](https://github.com/noonomyen) |
+| [Weak Vault](./challenges/weak-vault) | Reverse Engineering | Easy | 100 | Static | Pre | [noonomyen](https://github.com/noonomyen) |
+| [Leak Password](./challenges/leak-password) | Forensics | Normal | 200 | Dynamic | Yes | [c0ffeeOverdose](https://github.com/c0ffeeOverdose) |
+| [Oops 62](./challenges/oops62) | Programming | Hard | 500 | Static | No | [noonomyen](https://github.com/noonomyen) |
+| [Ask Real](./challenges/ask-real) | Cryptography | Normal | 200 | Static | No | [noonomyen](https://github.com/noonomyen) |
+| [Ruby On Rails](./challenges/ruby-on-rails) | Forensics | Medium | 300 | Dynamic | Yes | [c0ffeeOverdose](https://github.com/c0ffeeOverdose) |
+| [Not Strict File Upload](./challenges/not-strict-file-upload) | Forensics | Easy | 100 | Dynamic | Yes | [c0ffeeOverdose](https://github.com/c0ffeeOverdose) |
+| [FTP Easy](./challenges/ftp-easy) | Network | Easy | 100 | Static | No | [c0ffeeOverdose](https://github.com/c0ffeeOverdose) |
+| [Ah My Eyes](./challenges/ah-my-eyes) | Cryptography | Medium | 300 | Static | No | [c0ffeeOverdose](https://github.com/c0ffeeOverdose) |
+| [Buta Pen](./challenges/buta-pen) | Cryptography | Easy | 100 | Static | No | [c0ffeeOverdose](https://github.com/c0ffeeOverdose) |
+| [Inspiration](./challenges/inspiration) | Cryptography | Hard | 500 | Static | No | [c0ffeeOverdose](https://github.com/c0ffeeOverdose) |
+| [Nuclear At Home](./challenges/nuclear-at-home) | Network | Hard | 500 | Static | No | [c0ffeeOverdose](https://github.com/c0ffeeOverdose) |
+| [Header](./challenges/header) | Web Application | Easy | 100 | Dynamic | Yes | [noonomyen](https://github.com/noonomyen) |
+| [Man In The Middle](./challenges/man-in-the-middle) | Network | Normal | 200 | Static | No | [c0ffeeOverdose](https://github.com/c0ffeeOverdose) |
+| [Weak Seed](./challenges/weak-seed) | Programming | Medium | 300 | Static | Yes | [noonomyen](https://github.com/noonomyen) |
+| [Stolen File](./challenges/stolen-file) | Network | Medium | 300 | Static | No | [c0ffeeOverdose](https://github.com/c0ffeeOverdose) |
+| [I Hacked It](./challenges/i-hacked-it) | Network | Normal | 200 | Dynamic | Yes | [noonomyen](https://github.com/noonomyen) |
+| [Not In Video](./challenges/not-in-video) | Steganography | Easy | 100 | Static | No | [noonomyen](https://github.com/noonomyen) |
+| [Inside](./challenges/inside) | Steganography | Normal | 200 | Static | No | [noonomyen](https://github.com/noonomyen) |
+| [Login](./challenges/login) | Binary Exploitation | Easy | 100 | Dynamic | Yes | [noonomyen](https://github.com/noonomyen) |
+| [Jump](./challenges/jump) | Binary Exploitation | Medium | 300 | Dynamic | Yes | [noonomyen](https://github.com/noonomyen) |
 
 ## Difficulty and Point
 
