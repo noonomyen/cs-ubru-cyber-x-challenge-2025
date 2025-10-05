@@ -20,7 +20,7 @@ Format: `CSUBRU{...}`
 | Max Attempts Allowed | unlimited |
 | Blood Bonus | Enable |
 | Container Image | ic-header |
-| Service Port | 8080 |
+| Service Port | 80 |
 | CPU Limit (0.1 CPUs) | 1 |
 | Memory Limit (MB) | 128 |
 | Storage Limit (MB) | 128 |
